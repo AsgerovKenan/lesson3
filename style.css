@@ -20,7 +20,8 @@ body {
 #nav .nav .nav-all{
     display: flex;
     justify-content: space-between;
-    margin: 0px 30px 10px 30px;
+    flex-wrap: wrap;
+    margin: 0px 5px 10px 10px;
 }
 #nav .nav .nav-all .nav-left a:hover{
     background-color: #bec8d6;
@@ -41,6 +42,9 @@ body {
     border-radius: 10px;
     transition: 0.5s ease;
     color: #858c96;
+}
+#nav .nav .nav-all .nav-center .icons{
+    padding-left: 35px;
 }
 #nav .nav .nav-all .nav-center .icons ul{
     list-style-type: none;
