@@ -4,31 +4,91 @@ body {
     font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI,
      Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji,
       Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
 }
-
+#nav .nav{
+    border-bottom: 3px solid red;
+    margin-bottom: 10px;
+    font-size: 13px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 111;
+    position: fixed;
+    background-color: white;
+}
+#nav .nav .nav-all{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 30px 10px 30px;
+}
+#nav .nav .nav-all .nav-left a:hover{
+    background-color: #bec8d6;
+}
+#nav .nav .nav-all .nav-center .icons li a:hover{
+    background-color: #bec8d6;
+}
+#nav .nav .nav-all .nav-right a:hover{
+    background-color: #bec8d6;
+}
+#nav .nav .nav-all .nav-left{
+    padding-top: 20px;
+}
+#nav .nav .nav-all .nav-left a{
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    color: #858c96;
+}
+#nav .nav .nav-all .nav-center .icons ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+#nav .nav .nav-all .nav-center .icons ul li a{
+    margin: 7px;
+    font-size: 20px;
+    background-color: transparent;
+    padding: 7px 15px 13px 15px;
+    border-radius: 50%;
+    transition: 0.5s ease;
+    color: #858c96;
+}
+#nav .nav .nav-all .nav-right{
+    padding-top: 20px;
+}
+#nav .nav .nav-all .nav-right .download{
+    color: red; 
+    background-color: rgb(240, 221, 221);
+}
+#nav .nav .nav-all .nav-right a{
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 5px 10px 5px;
+    transition: 0.5s ease;
+}
 #navbar{
     display: flex;
+    width: 85%;
     height: 50px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
     margin-bottom: 10px;
+    margin-top: 80px;
 }
-
 #navbar .navbar-left p{
-    margin-right: 150px;
     display: flex;
     list-style-type: none;
     cursor: pointer;
     font-size: 20px;
     background-color: transparent;
+    padding-left: 300px;
 }
-
 #navbar .navbar-right button{
-    margin-left: 150px;
-    width: 89px;
     height: 50px;
     font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji,
@@ -42,33 +102,33 @@ body {
     border-radius: 5px;
     transition: 0.5s ease;
 }
-
 #navbar .navbar-right button:hover{
     background-color: #0a58ca;
 }
-
+#header{
+    position: relative;
+}
+#header .overlay{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient( rgba(22, 31, 85, 0.35), rgba(22, 31, 85, 0.35) ), url(background-photo.jpg);
+    background-size: cover;
+    z-index: 1;
+}
 #header .text-form-button{
     height: 620px;
-    background-image: linear-gradient( rgba(22, 31, 85, 0.35), rgba(22, 31, 85, 0.35) ), url(background-photo.jpg);
     background-position: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
+    z-index: 2;
 }
-
-/*#header .text-form-button::before {
-    content: "";
-    position: absolute;
-    background-color: #1c375e;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.5;
-}*/
-
 #header .text-form-button .form-1{
     font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI,
      Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji,
@@ -78,13 +138,11 @@ body {
     width: 700px;
     height: 65px;
 }
-
 #header .text-form-button h1{
     font-size: 45px;
     color: white;
     text-align: center;
 }
-
 #header .text-form-button .form-1 input{
     width: 480px;
     outline: none;
@@ -93,7 +151,6 @@ body {
     font-size: 20px;
     padding: 20px;
 }
-
 #header .text-form-button .form-1 .button button{
     color: white;
     font-size: 18px;
@@ -104,29 +161,213 @@ body {
     width: 100px;
     height: 65px;
 }
-
-#center .content {
+#center {
+    margin-left: 250px;
+    margin-right: 250px;
     padding-top: 80px;
+    padding-bottom: 80px;
+}
+#center .content {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    margin-left: 250px;
-    margin-right: 250px;
+    flex-wrap: wrap;
     opacity: 0.85;
-
 }
-
 #center .content h3{
     font-size: 30px;
     margin-bottom: 0;
 }
-
 #center .content p{
     font-size: 19px;
     margin-top: 10px;
 }
-
 #center .content .content-1 i{
     font-size: 80px;
     color:#0066ff;
 }
+#content .content ul{
+    padding: 0;
+}
+#content .content ul li {
+    display: flex;
+    box-sizing: border-box;
+}
+#content .content ul li .note{
+    width: 50%;
+    font-size: 20px;
+    margin: auto;
+    padding: 7rem;
+    order: 1;
+}
+#content .content ul li .photo-1{
+    background-image: url(photo-1.jpg);
+    width: 50%;
+    background-size: cover;
+    padding: 7rem;
+    order: 2;
+}
+#content .content ul li .photo-2{
+    background-image: url(photo-2.jpg);
+    width: 50%;
+    background-size: cover;
+    padding: 7rem;
+}
+#content .content ul li .photo-3{
+    background-image: url(photo-3.jpg);
+    width: 50%;
+    background-size: cover;
+    padding: 7rem;
+    order: 2;
+}
+#people .content{
+    text-align: center;
+    margin: 100px 300px 100px 300px;
+}
+#people .content h1{
+    font-size: 31px;
+}
+#people .quotes {
+    padding-top: 30px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    opacity: 0.85;
+}
+#people .quotes h5{
+    font-size: 30px;
+    margin-bottom: 0;
+}
+#people .quotes p{
+    font-size: 17px;
+    margin-top: 10px;
+}
+#people .content .quote-1 {
+}
+#people .content .quote-1 h5{
+    margin-top: 0;
+}
+#people .content .quotes .quote-1 .photo-all{
+    max-width: 12rem;
+    border-radius: 50%;
+}
+#bottom{
+    position: relative;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+#bottom .overlay{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient( rgba(22, 31, 85, 0.35), rgba(22, 31, 85, 0.35) ), url(background-photo.jpg) ;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+#bottom .text-form-button{
+    background-position: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 2;
+}
+#bottom .text-form-button .form-1{
+    font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI,
+     Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji,
+      Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+    height: 65px;
+}
+#bottom .text-form-button h1{
+    font-size: 31px;
+    color: white;
+    text-align: center;
+}
+#bottom .text-form-button .form-1 input{
+    width: 480px;
+    outline: none;
+    border: 1px transparent;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 20px;
+}
+#bottom .text-form-button .form-1 .button button{
+    color: white;
+    font-size: 18px;
+    border: 0px;
+    border-radius: 5px;
+    background-color:#0d6efd;
+    opacity: 0.7;
+    width: 100px;
+    height: 65px;
+}
+#footer{
+    padding-bottom: 50px;
+}
+#footer .about-us{
+    margin: 0px 150px 0px 150px;
+}
+#footer .about-us .end{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+#footer .about-us .end a{
+    color: #0066ff;
+}
+#footer .about-us .end .end-left {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#footer .about-us .end .end-left .text{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+#footer .about-us .end .end-left ul li{
+    margin: 5px;
+}
+#footer .about-us .end .end-left p{
+    margin: 0px 0px 0px 40px;
+    opacity: 0.7;
+    font-size: 15px;
+}
+#footer .about-us .end .end-right{
+    display: flex;
+    justify-content: space-around;
+}
+#footer .about-us .end .end-right .text{
+    display: flex;
+    list-style: none;
+
+}
+#footer .about-us .end .end-right .text ul li{
+    font-size: 30px;
+    margin: 15px;
+}
+#footer .about-us .end .end-right .text .text .text a {
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+#footer .about-us .end .end-right .text .text .text a:hover{
+    color: #043a8a;
+}
+#footer .about-us .end .end-left .text .text a {
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+#footer .about-us .end .end-left .text .text a:hover{
+    color: #043a8a;
+}
+
